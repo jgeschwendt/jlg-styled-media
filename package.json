@@ -11,37 +11,36 @@
   "module": "dist/styled-media.esm.js",
   "sideEffects": false,
   "types": "src/index.ts",
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "7.6.2",
-    "@babel/preset-env": "7.6.2",
-    "@babel/preset-typescript": "7.6.0",
-    "@types/styled-components": "4.1.19",
-    "@typescript-eslint/eslint-plugin": "2.3.2",
-    "@typescript-eslint/parser": "2.3.2",
-    "babel-loader": "8.0.6",
-    "babel-plugin-styled-components": "1.10.6",
-    "eslint": "6.5.1",
-    "eslint-loader": "3.0.2",
-    "npm-check-updates": "3.1.23",
-    "rollup-plugin-babel": "4.3.3",
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "@babel/preset-typescript": "7.9.0",
+    "@types/react": "16.9.34",
+    "@types/react-dom": "16.9.7",
+    "@types/styled-components": "5.1.0",
+    "@typescript-eslint/eslint-plugin": "2.31.0",
+    "@typescript-eslint/parser": "2.31.0",
+    "babel-plugin-styled-components": "1.10.7",
+    "eslint": "6.8.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "rollup": "2.8.0",
+    "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-node-resolve": "5.2.0",
-    "rollup": "1.22.0",
     "styled-components": "5.0.0",
-    "typescript": "3.6.3"
+    "typescript": "3.8.3"
   },
   "peerDependencies": {
-    "styled-components": "^5.0.0"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "build": "rollup -c",
-    "c": "npm-check-updates",
-    "cu": "npm-check-updates -u",
-    "lint": "eslint --ext .ts --ext .tsx src/",
-    "lint-fix": "eslint --ext .ts --ext .tsx --fix src/",
-    "prepare": "npm run build",
-    "start": "rollup --watch",
+    "dev": "rollup --watch",
+    "lint": "eslint --ext .ts --ext .tsx .",
+    "prepare": "yarn run build",
     "test": "jest"
   }
 }
